@@ -26,7 +26,7 @@ class AiController < ApplicationController
                   Analyze the following job description and return the following fields in JSON format:
                   - title: The job title.
                   - description: A brief job description.
-                  - benefits: A list of benefits provided.
+                  - benefits: A description of the benefits provided.
       
                   Job description:
                   "#{prompt}"
@@ -51,22 +51,6 @@ class AiController < ApplicationController
           nil
         end
       end
-      
-      
-  
-    def build_prompt(prompt)
-      <<~PROMPT
-        Analyze the following job description and extract the following fields:
-        - Job title
-        - Job description
-        - Benefits
-  
-        Job description:
-        "#{prompt}"
-  
-        Return the information as a JSON object.
-      PROMPT
-    end
   
     def parse_response(response_text)
       JSON.parse(response_text)
