@@ -2,9 +2,19 @@ class PositionsController < ApplicationController
   before_action :set_position, only: %i[show update destroy]
 
   def index
-    positions = Position.includes(:client).all
-    render json: positions.as_json(include: { client: { only: %i[id name logo] } })
+    positions = Position.includes(:client)
+    positions = positions.where("title ILIKE ?", "%#{params[:search]}%") if params[:search].present?
+    positions = positions.where(status: params[:status]) if params[:status].present?
+  
+    positions = positions.page(params[:page]).per(5)
+  
+    render json: {
+      positions: positions.as_json(include: { client: { only: [:id, :name, :logo] } }),
+      total_pages: positions.total_pages,
+      current_page: positions.current_page
+    }
   end
+  
 
   def show
     render json: @position.as_json(include: { client: { only: %i[id name logo] } })
