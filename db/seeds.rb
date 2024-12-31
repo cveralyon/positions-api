@@ -32,7 +32,7 @@ Position.create!([
     status: "Open"
   },
   {
-    client_id: clients[1].id,
+    client_id: clients[0].id,
     title: "Data Scientist",
     description: "Analyze complex datasets to provide actionable insights.",
     hiring_number: 2,
@@ -54,7 +54,7 @@ Position.create!([
     status: "Closed"
   },
   {
-    client_id: clients[0].id,
+    client_id: clients[1].id,
     title: "Cloud Engineer",
     description: "Design and maintain scalable cloud infrastructure.",
     hiring_number: 4,
@@ -98,7 +98,7 @@ Position.create!([
     status: "Open"
   },
   {
-    client_id: clients[1].id,
+    client_id: clients[2].id,
     title: "Data Engineer",
     description: "Develop and optimize data pipelines for large datasets.",
     hiring_number: 3,
@@ -107,7 +107,139 @@ Position.create!([
     salary: 5000,
     benefits: "Flexible hours, free AWS certifications",
     status: "Closed"
+  },
+  {
+    client_id: clients[1].id,
+    title: "Frontend Developer",
+    description: "Create interactive user interfaces using modern frameworks.",
+    hiring_number: 2,
+    work_mode: "Remote",
+    location: "Tokyo",
+    salary: 4500,
+    benefits: "Health insurance, stock options",
+    status: "Open"
+  },
+  {
+    client_id: clients[1].id,
+    title: "Backend Developer",
+    description: "Develop and maintain server-side logic and APIs.",
+    hiring_number: 3,
+    work_mode: "On-Site",
+    location: "Paris",
+    salary: 5500,
+    benefits: "Flexible hours, free meals",
+    status: "Open"
+  },
+  {
+    client_id: clients[1].id,
+    title: "Cybersecurity Analyst",
+    description: "Monitor and protect systems from cyber threats.",
+    hiring_number: 1,
+    work_mode: "Hybrid",
+    location: "Singapore",
+    salary: 7000,
+    benefits: "Remote work allowance, health insurance",
+    status: "Paused"
+  },
+  {
+    client_id: clients[2].id,
+    title: "HR Manager",
+    description: "Oversee and manage human resources operations.",
+    hiring_number: 2,
+    work_mode: "On-Site",
+    location: "Sydney",
+    salary: 5000,
+    benefits: "Stock options, yearly bonuses",
+    status: "Closed"
+  },
+  {
+    client_id: clients[0].id,
+    title: "AI Researcher",
+    description: "Conduct research and develop AI solutions.",
+    hiring_number: 4,
+    work_mode: "Remote",
+    location: "Los Angeles",
+    salary: 9000,
+    benefits: "Research grants, free equipment",
+    status: "Open"
+  },
+  {
+    client_id: clients[2].id,
+    title: "Project Coordinator",
+    description: "Coordinate projects and ensure timely delivery.",
+    hiring_number: 2,
+    work_mode: "Hybrid",
+    location: "Mexico City",
+    salary: 4000,
+    benefits: "Paid leave, flexible hours",
+    status: "Open"
+  },
+  {
+    client_id: clients[2].id,
+    title: "IT Support Specialist",
+    description: "Provide technical support and resolve IT issues.",
+    hiring_number: 2,
+    work_mode: "On-Site",
+    location: "Bangkok",
+    salary: 3500,
+    benefits: "Health insurance, free training",
+    status: "Paused"
+  },
+  {
+    client_id: clients[0].id,
+    title: "Graphic Designer",
+    description: "Design creative visuals for marketing campaigns.",
+    hiring_number: 1,
+    work_mode: "Remote",
+    location: "Rome",
+    salary: 3200,
+    benefits: "Remote work allowance, flexible hours",
+    status: "Open"
+  },
+  {
+    client_id: clients[0].id,
+    title: "Database Administrator",
+    description: "Maintain and optimize database systems.",
+    hiring_number: 3,
+    work_mode: "Hybrid",
+    location: "Dubai",
+    salary: 6000,
+    benefits: "Paid certifications, health insurance",
+    status: "Open"
+  },
+  {
+    client_id: clients[0].id,
+    title: "Sales Executive",
+    description: "Drive sales and manage client relationships.",
+    hiring_number: 4,
+    work_mode: "On-Site",
+    location: "Seoul",
+    salary: 5000,
+    benefits: "Stock options, yearly bonuses",
+    status: "Open"
+  },
+  {
+    client_id: clients[0].id,
+    title: "Content Writer",
+    description: "Create engaging content for various platforms.",
+    hiring_number: 1,
+    work_mode: "Remote",
+    location: "Vienna",
+    salary: 2800,
+    benefits: "Flexible hours, free training",
+    status: "Open"
+  },
+  {
+    client_id: clients[1].id,
+    title: "Machine Learning Engineer",
+    description: "Build and deploy machine learning models.",
+    hiring_number: 2,
+    work_mode: "Hybrid",
+    location: "Madrid",
+    salary: 7500,
+    benefits: "Flexible hours, research grants",
+    status: "Open"
   }
 ])
 
-puts "✅ Seed data created successfully!"
+puts "✅ 20 Positions Seed Data Created Successfully!"

@@ -6,7 +6,7 @@ class PositionsController < ApplicationController
     positions = positions.where("title ILIKE ?", "%#{params[:search]}%") if params[:search].present?
     positions = positions.where(status: params[:status]) if params[:status].present?
   
-    positions = positions.page(params[:page]).per(5)
+    positions = positions.page(params[:page]).per(8)
   
     render json: {
       positions: positions.as_json(include: { client: { only: [:id, :name, :logo] } }),
