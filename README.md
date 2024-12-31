@@ -1,24 +1,34 @@
-# README
+# REDNIAM Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este proyecto es el backend de un sistema de gestión de posiciones de trabajo. Construido con Ruby on Rails, proporciona un conjunto de API para manejar posiciones, clientes y funcionalidades avanzadas como generación automática de contenido usando OpenAI.
 
-Things you may want to cover:
+## Características
 
-* Ruby version
+- **Gestión de posiciones:** CRUD completo para posiciones.
+- **Integración con OpenAI:** Relleno automático de datos basado en prompts.
 
-* System dependencies
+## Requisitos
 
-* Configuration
+- Ruby
+- PostgreSQL
+- Bundler
 
-* Database creation
+## Instalación
 
-* Database initialization
+1. Clona este repositorio
 
-* How to run the test suite
+2. Instala las dependencias:
+bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Configura la base de datos con tu PostgreSQL
 
-* Deployment instructions
+4. Crea y migra la base de datos:
+rails db:create
+rails db:migrate
+rails db:seed
 
-* ...
+5. Configura las variables de entorno:
+OPENAI_API_KEY=<clave_de_openai>
+
+6. Ejecuta el servidor:
+rails server
