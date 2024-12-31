@@ -1,8 +1,6 @@
-# Limpiar datos existentes
 Client.destroy_all
 Position.destroy_all
 
-# Crear clientes
 clients = Client.create!([
   {
     name: "Google",
@@ -18,7 +16,6 @@ clients = Client.create!([
   }
 ])
 
-# Crear posiciones
 Position.create!([
   {
     client_id: clients[0].id,
